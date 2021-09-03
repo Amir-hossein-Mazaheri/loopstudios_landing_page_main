@@ -1,0 +1,39 @@
+@use '../mixins'as *;
+
+.intro {
+    $gap : 9rem;
+    background-image: url('../../src/images/mobile/image-hero.jpg');
+    background-position: center top;
+    background-size: cover;
+    padding-bottom: $gap + 6rem;
+    @include mediaQueryUp(md) {
+        background-image: url('../../src/images/desktop/image-hero.jpg');
+    }
+//dsf
+    &-txt {
+        margin: 0 auto;
+        margin-top: $gap;
+        width: min(90%, 33rem);
+        padding: 1.5em;
+         @include mediaQueryUp(md) {
+            margin-right: 0;
+            margin-left: 0;
+         }
+
+        h1 {
+            margin: 0;
+            line-height: 1.2;
+        }
+    }
+
+    @include mediaQueryUp(md) {
+        .nvb {
+            padding-top: 5rem;
+
+            .navbar-logo {
+                transform: none;
+            }
+        }
+    }
+}
+

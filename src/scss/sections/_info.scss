@@ -1,0 +1,30 @@
+@use '../mixins'as *;
+
+.info {
+    padding: 1em 2em;
+    margin: 5rem 0;
+    position: relative;
+    @include mediaQueryUp(md) {
+        margin-bottom: 8rem;
+    }
+
+    h3 {
+        margin-top: 0.58em;
+        line-height: 1;
+    }
+
+    p {
+        line-height: 1.8;
+    }
+
+    &-content {
+        @include mediaQueryUp(md) {
+            width: 50%;
+            position: absolute;
+            bottom: -3%;
+            right: 0%;
+            background: white;
+            padding: 3em;
+        }
+    }
+}

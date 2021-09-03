@@ -1,0 +1,67 @@
+@import 'mixins';
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+
+$fontFamily : 'Alata',
+sans-serif;
+
+.alata {
+    font-family: $fontFamily !important;
+}
+
+.josefin {
+    font-family: 'Josefin Sans', sans-serif !important;
+}
+
+.uppercase {
+    text-transform: uppercase !important;
+}
+
+$defaultFont: (font-family: 'Josefin Sans',
+    font-size: 0.625rem,
+    // base font size
+    line-height: 1.7,
+    font-weight: 500,
+);
+
+$headingFont: (font-family: 'Josefin Sans',
+    font-size: 0.475rem,
+    // base font size
+    line-height: 2,
+    font-weight: 700,
+);
+
+$breakPoints: (sm: 375px,
+    md: 1440px,
+    lg: 1440px,
+);
+
+$themeColors: (primary: hsl(0, 0%, 55%),
+    secondary: hsl(0, 0%, 41%),
+    light: #ecf0f1,
+    dark: #34495e,
+    white: hsl(0, 0%, 100%),
+    black: hsl(0, 0%, 0%),
+    transparent : transparent);
+
+@import '../../node_modules/lightboot-framework/src/scss/LightBoot.scss';
+
+body {
+    font-size: 15px;
+}
+
+.mobile {
+    display: block !important;
+
+    @include mediaQueryUp(md) {
+        display: none !important;
+    }
+}
+
+.desktop {
+    display: none !important;
+
+    @include mediaQueryUp(md) {
+        display: block !important;
+    }
+}

@@ -1,0 +1,14 @@
+@use '../mixins'as *;
+
+footer {
+    background-color: map-get($themeColors, black);
+    text-align: center;
+
+    .socials li{
+        cursor: pointer;
+    }
+
+    @include mediaQueryUp(md) {
+        text-align: left;
+    }
+}
