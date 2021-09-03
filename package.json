@@ -1,0 +1,20 @@
+{
+  "name": "loopstudios-landing-page-main",
+  "version": "1.0.0",
+  "description": "![Design preview for the Loopstudios landing page coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass src/scss/style.scss:dist/css/style.css --watch",
+    "sass-min": "sass src/scss/style.scss:dist/css/style.min.css --watch --style compressed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "lightboot-framework": "^1.0.0",
+    "sass": "^1.39.0"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4"
+  }
+}
